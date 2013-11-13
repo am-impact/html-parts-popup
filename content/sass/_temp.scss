@@ -1,0 +1,55 @@
+@import "compass/css3/box-sizing";
+
+* {
+    @include box-sizing(border-box);
+}
+
+$small-screen: 768px !default;
+$bordercolor: #DDD;
+$bgcolor: #EEE;
+$fix-mqs: false !default;
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Responsive min
+@mixin respond-min( $width ) {
+	// Als het fixed width is
+    @if $fix-mqs {
+        // en als deze meer is dan de breedte (moeten we het toepassen)
+        @if $fix-mqs >= $width {
+            @content;
+        }
+    }
+    @else {
+        // Anders gewoon een media query
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+// Responsive max
+@mixin respond-max( $width ) {
+    // Als het fixed width is
+    @if $fix-mqs {
+        // en als deze minder is dan de breedte (moeten we het toepassen)
+        @if $fix-mqs < $width {
+            @content;
+        }
+    }
+    @else {
+        // Anders gewoon een media query
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
