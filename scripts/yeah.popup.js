@@ -49,5 +49,12 @@ var Yeah = Yeah || {};
         e.preventDefault();
     });
 
-    $popup_inner.on('click', '.popup--close', Yeah.close_popup);
+    // Met sluitknop popup sluiten
+    $popup_inner.on('click', '.popup--close', TUP.close_popup);
+
+    // Met esape popup sluiten
+    $(document).keyup(function(e) {
+        // Escape
+        if( e.keyCode == 27 ) { TUP.close_popup(); }
+    });
 })();
