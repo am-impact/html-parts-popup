@@ -36,7 +36,7 @@
 	//
 	// Responsive min
 	//
-	@include respond-min( $small-screen ) {
+	@include media-query( desk ) {
 		max-width: 640px;
 		left: 50%;
 		margin: 5% 0;
@@ -50,8 +50,8 @@
 	padding: 15px;
 	min-height: 57px;
 	overflow: hidden;
-	border-bottom: 1px solid $bordercolor;
-	background: $bgcolor;
+	border-bottom: 1px solid $base-ui-color;
+	background: #EEE;
 
 	h5 {
 		padding-right: 30px;
