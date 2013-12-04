@@ -11,7 +11,7 @@ var Yeah = Yeah || {};
 
         $popup_title = $('<h5></h5>').appendTo( $popup_top );
 
-    $('<span class="popup--close">Close</div>').appendTo( $popup_top );
+    $('<span class="popup--close">Close</span>').appendTo( $popup_top );
 
     $popup_wrap.appendTo('body');
 
