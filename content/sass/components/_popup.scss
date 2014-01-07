@@ -40,7 +40,7 @@
 	//
 	// Responsive min
 	//
-	@include media-query( desk ) {
+	@media #{$medium-up} {
 		max-width: 640px;
 		left: 50%;
 		margin: 5% 0;
