@@ -4,14 +4,14 @@ var FW = FW || {};
  * Popup regelen
  */
 (function() {
-    var $popup_wrap = $('<div class="popup--overlay"></div>').addClass('visuallyhidden'),
-        $popup_inner = $('<div class="popup--inner"></div>').appendTo( $popup_wrap ),
-        $popup_top = $('<div class="popup--top"></div>').appendTo( $popup_inner ),
-        $popup_content = $('<div class="popup--content"></div>').appendTo( $popup_inner ),
+    var $popup_wrap = $('<div class="popup__overlay"></div>').addClass('visuallyhidden'),
+        $popup_inner = $('<div class="popup__inner"></div>').appendTo( $popup_wrap ),
+        $popup_top = $('<div class="popup__top"></div>').appendTo( $popup_inner ),
+        $popup_content = $('<div class="popup__content"></div>').appendTo( $popup_inner ),
 
         $popup_title = $('<h5></h5>').appendTo( $popup_top );
 
-    $('<span class="popup--close">Close</span>').appendTo( $popup_top );
+    $('<span class="popup__close">Close</span>').appendTo( $popup_top );
 
     $popup_wrap.appendTo('body');
 
@@ -50,7 +50,7 @@ var FW = FW || {};
     });
 
     // Met sluitknop popup sluiten
-    $popup_inner.on('click', '.popup--close', FW.close_popup);
+    $popup_inner.on('click', '.popup__close', FW.close_popup);
 
     // Met esape popup sluiten
     $(document).keyup(function(e) {
