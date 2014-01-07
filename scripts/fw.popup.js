@@ -50,11 +50,11 @@ var FW = FW || {};
     });
 
     // Met sluitknop popup sluiten
-    $popup_inner.on('click', '.popup--close', TUP.close_popup);
+    $popup_inner.on('click', '.popup--close', FW.close_popup);
 
     // Met esape popup sluiten
     $(document).keyup(function(e) {
         // Escape
-        if( e.keyCode == 27 ) { TUP.close_popup(); }
+        if( e.keyCode == 27 ) { FW.close_popup(); }
     });
 })();
