@@ -1,4 +1,4 @@
-var Yeah = Yeah || {};
+var FW = FW || {};
 
 /**
  * Popup regelen
@@ -16,7 +16,7 @@ var Yeah = Yeah || {};
     $popup_wrap.appendTo('body');
 
     // Update popup content
-    Yeah.update_popup_content = function( htmlcontent, popuptitle ) {
+    FW.update_popup_content = function( htmlcontent, popuptitle ) {
         if( !popuptitle ) popuptitle = '';
 
         $popup_title.text(popuptitle);
@@ -24,12 +24,12 @@ var Yeah = Yeah || {};
     }
 
     // Open popup
-    Yeah.open_popup = function() {
+    FW.open_popup = function() {
         $popup_wrap.removeClass('visuallyhidden');
     }
 
     // Close popup
-    Yeah.close_popup = function() {
+    FW.close_popup = function() {
         $popup_wrap.addClass('visuallyhidden');
         $popup_content.empty();
     }
@@ -42,8 +42,8 @@ var Yeah = Yeah || {};
         $.ajax({
             url: $this.attr('href')
         }).done(function( data ) {
-            Yeah.update_popup_content( data, $this.attr('title') );
-            Yeah.open_popup();
+            FW.update_popup_content( data, $this.attr('title') );
+            FW.open_popup();
         });
 
         e.preventDefault();

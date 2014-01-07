@@ -1,9 +1,9 @@
 html-parts-popup
 ================
 
-Uitbreiding op [html startup](https://github.com/nweevers/html_startup_inuit)
+Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 
 Bestanden
 ---------
- * content/sass/ui/components/_popup.scss
- * scripts/yeah.popup.js
+ * content/sass/components/_popup.scss
+ * scripts/fw.popup.js
