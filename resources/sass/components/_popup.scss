@@ -45,14 +45,6 @@
 			padding-right: 30px;
 			margin: 0;
 		}
-
-		&__close {
-			position: absolute;
-			right: 5px;
-			top: 8px;
-			z-index: 20;
-			padding: 10px;
-		}
 	}
 
 	// Content
@@ -62,6 +54,10 @@
 
 	// Close
 	&__close {
+		position: absolute;
+		right: 5px;
+		top: 8px;
+		z-index: 20;
 		cursor: pointer;
 	}
 }
