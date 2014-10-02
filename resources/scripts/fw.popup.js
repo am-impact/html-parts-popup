@@ -36,15 +36,23 @@ var FW = FW || {};
 
     // Open popup on every popup link
     $('body').on('click', '.popup', function(e) {
-        var $this = $(this);
+        var $this = $(this),
+            $elOnPage = $( $this.attr('href') );
 
-        // Url met ajax ophalen
-        $.ajax({
-            url: $this.attr('href')
-        }).done(function( data ) {
-            FW.update_popup_content( data, $this.attr('title') );
+        // Als het om een element op de pagina gaat, bijv #element
+        if( $elOnPage.length > 0 ) {
+            FW.update_popup_content( $elOnPage.html(), $this.attr('title') );
             FW.open_popup();
-        });
+        }
+        else {
+            // Url met ajax ophalen
+            $.ajax({
+                url: $this.attr('href')
+            }).done(function( data ) {
+                FW.update_popup_content( data, $this.attr('title') );
+                FW.open_popup();
+            });
+        }
 
         e.preventDefault();
     });
