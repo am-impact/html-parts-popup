@@ -13,7 +13,7 @@ Bestanden
  ## Voorbeelden
 
  ### Html
-    <a href="popup-content.html" class="popup">Popup</a>
+    <a href="popup-content.html" data-popup>Popup</a>
 
     <script>
         head.js(

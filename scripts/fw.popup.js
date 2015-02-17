@@ -21,21 +21,21 @@ var FW = FW || {};
 
         $popup_title.text(popuptitle);
         $popup_content.html( htmlcontent );
-    }
+    };
 
     // Open popup
     FW.open_popup = function() {
         $popup_wrap.removeClass('visuallyhidden');
-    }
+    };
 
     // Close popup
     FW.close_popup = function() {
         $popup_wrap.addClass('visuallyhidden');
         $popup_content.empty();
-    }
+    };
 
     // Open popup on every popup link
-    $('body').on('click', '.popup', function(e) {
+    $('body').on('click', '[data-popup]', function(e) {
         var $this = $(this),
             $elOnPage = $( $this.attr('href') );
 
