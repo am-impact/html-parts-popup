@@ -65,9 +65,9 @@ FW.popup = ( function( window, undefined ) {
         bindEvents();
     }
 
+    init();
+
     return {
-        init: init
+        //open: open
     };
 })( window );
-
-FW.popup.init();
